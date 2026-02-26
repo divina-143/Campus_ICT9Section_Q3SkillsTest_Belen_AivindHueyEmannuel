@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+
+
+<style>
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif
+}
+
+body {
+    background-color: #111;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #1a1a1a;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: rgb(4, 180, 255);
+    text-decoration: none;
+}
+
+.nav-buttons .book {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.create-btn {
+    background-color: #000c8ec4;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero Background */
+.hero {
+    height: 90vh;
+    background: url(images.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Registration Card */
+.registration-card {
+    display: flex;
+    width: 800px;
+    background: rgba(53, 2, 162, 0.699);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 40%;
+    text-align: center;
+}
+
+.profile-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 14px;
+}
+
+.upload-btn {
+    margin-top: 10px;
+    background-color: #65888d;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 60%;
+    padding-left: 20px;
+}
+
+.right-panel h1 {
+    margin-bottom: 10px;
+}
+
+.instructions {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row div {
+    flex: 1;
+}
+
+.terms {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+    
+
+    <!-- 9E & 9R: Add your own JavaScript below before the closing </body> tag.
+         Use event handling and basic Math methods as discussed in class.
+         This will be part of your project. You may work with your partner. -->
+
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Fare Matrix</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a href="#" class="book">Book Now</a>
+            <a href="#" class="create-btn">Create Account</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <div class="registration-card">
+
+            <div class="left-panel">
+                <div class="profile-placeholder">
+                    Profile Image
+                </div>
+                <input type="file" id="profileInput" accept="image/*">
+                <button class="upload-btn">Upload Photo</button>
+            </div>
+
+            <div class="right-panel">
+                <h1>REGISTRATION</h1>
+
+                <p class="instructions">
+                    Please fill out all required fields in the registration form with accurate information.
+                </p>
+
+                <form>
+                    <label>First Name</label>
+                    <input type="text">
+
+                    <label>Last Name</label>
+                    <input type="text">
+
+                    <div class="row">
+                        <div>
+                            <label>Age</label>
+                            <input type="number">
+                        </div>
+                        <div>
+                            <label>Contact Number</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <label>Email</label>
+                    <input type="email">
+
+                    <label>Enter your username</label>
+                    <input type="text">
+
+                    <label>Enter your password</label>
+                    <input type="password">
+
+                    <div class="terms">
+                        <input type="checkbox">
+                        <span>I accept the Terms of Use and Privacy Policy</span>
+                    </div>
+
+                    <button class="submit-btn">Create my account</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+    Mona Sylvia K. Barinaga and Aivind Huey Emannuel D. Belen | Grade & Section ©2026
+    </footer>
+
+<script>
+const input = document.getElementById("profileInput");
+const placeholder = document.querySelector(".profile-placeholder");
+
+input.addEventListener("change", function () {
+    const file = input.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        placeholder.style.backgroundImage = `url(${e.target.result})`;
+        placeholder.style.backgroundSize = "cover";
+        placeholder.style.backgroundPosition = "center";
+        placeholder.textContent = "";
+    };
+    reader.readAsDataURL(file);
+});
+</script>
+
+</body>
+</html>
